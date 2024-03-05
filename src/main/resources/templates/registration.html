@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:insert="~{fragments/head :: head}"></head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+	<div th:insert="~{fragments/sidebar :: sidebar}"></div>
+
+	<!-- Content Wrapper -->
+	<div id="content-wrapper" class="d-flex flex-column">
+
+		<!-- Main Content -->
+		<div id="content">
+
+			<div th:insert="~{fragments/topbar :: topbar}"></div>
+
+			<!-- Begin Page Content -->
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-md-6 col-md-offset-3">
+
+						<!-- success message -->
+						<div th:if="${param.success}">
+							<div class="alert alert-info">Utilizador registado com sucesso</div>
+						</div>
+
+						<h2 class="text-center">Criar Utilizador</h2>
+
+						<form th:action="@{/registration}" method="post" th:object="${user}">
+							<div class="form-group">
+								<label class="control-label" for="firstName"> Nome Próprio </label>
+								<input id="firstName" class="form-control" th:field="*{firstName}" required autofocus="autofocus" />
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="lastName"> Apelido </label>
+								<input id="lastName" class="form-control" th:field="*{lastName}" required autofocus="autofocus" />
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="username"> Username </label>
+								<input id="username" class="form-control" th:field="*{username}" required autofocus="autofocus" />
+							</div>
+
+							<div class="form-group">
+								<label class="control-label" for="password"> Password </label>
+								<input id="password" class="form-control" type="password" th:field="*{password}" required autofocus="autofocus" />
+							</div>
+
+
+							<div class="form-group">
+								<label class="control-label" for="role"> Permissões </label>
+								<select class="form-control" name="role" id="role" required autofocus="autofocus">
+									<option th:each="roleOpt : ${T(kvn.motores.springboot.enumerations.Roles).values()}"
+											th:value="${roleOpt}" th:text="${roleOpt.displayValue}"></option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn btn-success">Registar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- /.container-fluid -->
+		</div>
+		<!-- End of Main Content -->
+
+		<footer th:fragment="~{fragments/footer :: footer}"></footer>
+
+	</div>
+	<!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+	<i class="fas fa-angle-up"></i>
+</a>
+
+</body>
+</html>

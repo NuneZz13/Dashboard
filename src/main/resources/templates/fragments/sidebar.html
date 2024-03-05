@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  ...
+</head>
+<body>
+<!-- Sidebar -->
+  <ul th:fragment="sidebar" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+      <div class="sidebar-brand-text mx-3">KVN Motores </div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="/">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Ações:
+    </div>
+
+    <!-- Nav Item - Veiculo Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVeiculo"
+         aria-expanded="true" aria-controls="collapseVeiculo">
+        <i class="fas fa-fw fa-car"></i>
+        <span>Veiculos</span>
+      </a>
+      <div id="collapseVeiculo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Operações:</h6>
+          <a class="collapse-item" href="buttons.html">Adicionar Veiculo</a>
+          <a class="collapse-item" href="cards.html">Consultar Veiculos</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Nav Item - Stock Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStock"
+         aria-expanded="true" aria-controls="collapseStock">
+        <i class="fas fa-fw fa-store"></i>
+        <span>Stock</span>
+      </a>
+      <div id="collapseStock" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Operações:</h6>
+          <a class="collapse-item" href="buttons.html">Adicionar Stock</a>
+          <a class="collapse-item" href="cards.html">Editar Stock</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Nav Item - Vendas Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVendas"
+         aria-expanded="true" aria-controls="collapseVendas">
+        <i class="fas fa-fw fa-coins"></i>
+        <span>Vendas</span>
+      </a>
+      <div id="collapseVendas" class="collapse" aria-labelledby="headingVendas"
+           data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Operações:</h6>
+          <a class="collapse-item" href="Vendas-color.html">Adicionar Venda</a>
+          <a class="collapse-item" href="Vendas-color.html">Anular Venda</a>
+          <a class="collapse-item" href="Vendas-border.html">Consultar Venda</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Nav Item - Gestão Utilizadores Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGerirUtilizadores"
+         aria-expanded="true" aria-controls="collapseGerirUtilizadores">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Gestão Utilizadores</span>
+      </a>
+      <div id="collapseGerirUtilizadores" class="collapse" aria-labelledby="headingGerirUtilizadores"
+           data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Operações:</h6>
+          <a class="collapse-item" href="/registration">Criar Utilizador</a>
+          <a class="collapse-item" href="Vendas-color.html">Editar/Apagar Utilizadores</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+
+
+  </ul>
+</body>
+<!-- End of Sidebar -->
+</html>
